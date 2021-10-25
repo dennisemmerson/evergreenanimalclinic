@@ -1,0 +1,31 @@
+/* @import url('https://fonts.googleapis.com/css?family=Song+Myung:400');
+@import url('https://fonts.googleapis.com/css?family=Black+And+White+Picture:400');
+
+.song-myung{
+    font-family: 'Song Myung';
+}
+
+.black-and-white{
+    font-family: 'Black and White Picture';
+} */
+
+.mybackgroundopacity{
+    background-color:rgba(0, 0, 0, 0.2);
+}
+
+.myopacity{
+    opacity:10%;
+}
+
+
+.green{
+    background-color: #1F6521;
+}
+
+
+
+.icons{
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+}
+
