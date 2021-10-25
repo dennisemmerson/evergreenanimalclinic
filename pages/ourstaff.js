@@ -4,7 +4,7 @@ import LanguageContext from '../lib/MyContext.js';
 
 import Navbar from "../components/Navbars/MyAuthNavbar.js";
 import Footer from "../components/Footers/MyFooter.js";
-import StaffProfile from "../components/cards/StaffProfile.js"
+import StaffProfile from "../components/Cards/StaffProfile.js"
 
 
 import { sanityClient, urlFor } from "../lib/sanity";
