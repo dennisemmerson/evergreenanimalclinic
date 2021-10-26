@@ -44,30 +44,35 @@ export default function MyFooter(props) {
                 >
                   <i className="fab fa-facebook-square"></i>
                 </button>
-                <button
+                {/* <button
                   className="bg-emerald-500 ml-3 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
-                  onClick={() =>{props.setBackgroundColour('bg-emerald-500'); props.setTextColour('text-emerald-500')}}
+                  onClick={() => { props.setBackgroundColour('bg-emerald-500'); props.setTextColour('text-emerald-500') }}
                 >
                 </button>
                 <button
-                  className="bg-teal-500 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  className="bg-teal-500 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
-                  onClick={() => {props.setBackgroundColour('bg-teal-500'); props.setTextColour('text-teal-500')}}
+                  onClick={() => { props.setBackgroundColour('bg-teal-500'); props.setTextColour('text-teal-500') }}
                 >
                 </button>
                 <button
-                  className="bg-orange-500 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  className="bg-orange-500 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
-                  onClick={() => {props.setBackgroundColour('bg-orange-500'); props.setTextColour('text-orange-500')}}
+                  onClick={() => { props.setBackgroundColour('bg-orange-500'); props.setTextColour('text-orange-500') }}
                 >
                 </button>
                 <button
-                  className="bg-red-500 text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                  className="bg-red-500 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
                   type="button"
-                  onClick={() => {props.setBackgroundColour('bg-red-500');props.setTextColour('text-red-500')}}
-                >
-                </button>
+                  onClick={() => { props.setBackgroundColour('bg-red-500'); props.setTextColour('text-red-500') }}
+                ></button>
+                  <button
+                    className="green shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                    type="button"
+                    onClick={() => { props.setBackgroundColour('green'); props.setTextColour('green') }}
+                  >
+                </button> */}
               </div>
             </div>
             <div className="w-full lg:w-8/12 px-4">

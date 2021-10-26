@@ -34,17 +34,10 @@ export default function Treatment({ navBarQueryData, footerQueryData, ourHospita
 
                 <main>
 
-
-
-
-
                     <div className="relative flex pt-32 content-center items-center justify-center min-h-screen-75">
                         <div className="container mx-auto">
                             <div className="flex flex-wrap text-center">
                                 <div className="w-full lg:w-10/12">
-
-
-
 
                                     <div class="max-w-lg mx-auto px-3">
                                         <div class="bg-white shadow-md border border-gray-200 rounded-lg mb-12 px-3">

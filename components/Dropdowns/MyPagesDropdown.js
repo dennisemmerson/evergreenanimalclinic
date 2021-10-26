@@ -40,9 +40,6 @@ const MyPagesDropdown = (props, state) => {
     setDropdownPopoverShow3(true);
   };
 
-
-
-
   const closeDropdownPopover = () => {
     setDropdownPopoverShow(false);
   };
@@ -53,8 +50,6 @@ const MyPagesDropdown = (props, state) => {
   const closeDropdownPopover3 = () => {
     setDropdownPopoverShow3(false);
   };
-
-
 
   const closeAllPopovers = () => {
     setDropdownPopoverShow(false);
@@ -111,11 +106,6 @@ const MyPagesDropdown = (props, state) => {
           </a>
         </Link>
       </div>
-
-
-
-
-
 
       <a
         className="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
@@ -208,7 +198,7 @@ const MyPagesDropdown = (props, state) => {
             {props.navBarQueryData[props.language].menu3item1}
           </a>
         </Link>
-        <Link key={props.navBarQueryData[props.language].menu3item2} href="/mypages/treatment">
+        {/* <Link key={props.navBarQueryData[props.language].menu3item2} href="/mypages/treatment">
           <a
             className={
               "text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
@@ -225,7 +215,7 @@ const MyPagesDropdown = (props, state) => {
           >
             {props.navBarQueryData[props.language].menu3item3}
           </a>
-        </Link>
+        </Link> */}
       </div>
     </>
   );

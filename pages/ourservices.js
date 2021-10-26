@@ -30,7 +30,7 @@ export default function OurServices({ navBarQueryData, footerQueryData, ourServi
                 <div className="absolute mybackgroundopacity top-0 w-full h-20"></div>
                 <main>
 
-                    <div className="relative mt-8 pt-16 pb-32 content-center items-center justify-center min-h-screen-75 flex flex-wrap">
+                    <div className="relative mt-8 pt-16 pb-16 content-center items-center justify-center min-h-screen-75 flex flex-wrap">
                         <div className="container mx-auto">
 
                             <div className="flex flex-wrap text-center">

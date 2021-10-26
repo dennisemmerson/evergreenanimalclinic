@@ -7,7 +7,7 @@ import Navbar from "../components/Navbars/MyAuthNavbar.js";
 import Footer from "../components/Footers/MyFooter.js";
 
 
-import { sanityClient, urlFor } from "../lib/sanity";
+import { sanityClient } from "../lib/sanity";
 
 // data from sanity
 const navBarQuery = `*[_type=="navBar"]`;
@@ -17,15 +17,9 @@ const contactFormQuery = `*[_type=="contactForm"]`;
 
 import { sendContactMail } from "../lib/emailFormContent"
 
-
-
-
-
 export default function Appointment({ navBarQueryData, footerQueryData, contactFormQueryData }) {
 
     const { language, setLanguage, backgroundColour, setBackgroundColour, textColour, setTextColour } = useContext(LanguageContext);
-
-    console.log(backgroundColour);
 
     let handleSubmit = function (e) {
         let name = e.target.name.value;
@@ -39,12 +33,10 @@ export default function Appointment({ navBarQueryData, footerQueryData, contactF
 
     };
 
-    // console.log(contactFormQueryData);
-
     return (
         <>
 
-            <div className={`absolute top-0 w-full h-20 ${backgroundColour}`} ></div>
+            <div className={`absolute top-0 w-full h-20 green`} ></div>
 
 
             <div className="bg-blueGray-200">
@@ -52,7 +44,7 @@ export default function Appointment({ navBarQueryData, footerQueryData, contactF
 
                 <div className="absolute mybackgroundopacity top-0 w-full h-20"></div>
                 <main>
-                    <div className="relative pt-32 pb-32 flex content-center items-center justify-center min-h-screen-75 ">
+                    <div className="relative pt-32 pb-16 flex content-center items-center justify-center min-h-screen-75 ">
 
                         <div className="container mx-auto">
                             <div className="flex justify-center px-2 mx-8 my-12">
@@ -65,18 +57,18 @@ export default function Appointment({ navBarQueryData, footerQueryData, contactF
                                     ></div>
 
                                     <div className="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
-                                        <h3 className={`pt-4 pb-4 text-2xl ${textColour} text-center`}>{contactFormQueryData[language].formTitle}</h3>
+                                        <h3 className={`pt-4 pb-4 text-2xl  text-center`}>{contactFormQueryData[language].formTitle}</h3>
                                         <hr className="mb-6 border-t" />
 
 
                                         <form className="px-8 pt-4 pb-8 mb-4 bg-white rounded" onSubmit={handleSubmit}>
                                             <div className="mb-4 px-6 md:flex md:justify-between">
                                                 <div className="mb-4 md:mr-2 md:mb-0">
-                                                    <label className={`block mb-2  font-bold ${textColour}`}>
+                                                    <label className={`block mb-2  font-bold `}>
                                                         <i className="fas fa-file-signature px-2"></i>{contactFormQueryData[language].field1}
                                                     </label>
                                                     <input
-                                                        className={`w-full px-3 py-2 leading-tight ${textColour} border rounded shadow appearance-none focus:outline-none focus:shadow-outline`}
+                                                        className={`w-full px-3 py-2 leading-tight  border rounded shadow appearance-none focus:outline-none focus:shadow-outline`}
                                                         id="name"
                                                         type="text"
                                                         placeholder={contactFormQueryData[language].field1}
@@ -84,11 +76,11 @@ export default function Appointment({ navBarQueryData, footerQueryData, contactF
                                                     />
                                                 </div>
                                                 <div className="md:ml-2">
-                                                    <label className={`block mb-2  font-bold ${textColour}`}>
+                                                    <label className={`block mb-2  font-bold `}>
                                                         <i className="fas fa-frog px-2"></i> {contactFormQueryData[language].field2}
                                                     </label>
                                                     <input
-                                                        className={`w-full px-3 py-2  leading-tight ${textColour} border rounded shadow appearance-none focus:outline-none focus:shadow-outline`}
+                                                        className={`w-full px-3 py-2  leading-tight  border rounded shadow appearance-none focus:outline-none focus:shadow-outline`}
                                                         id="petName"
                                                         type="text"
                                                         placeholder={contactFormQueryData[language].field2}
@@ -99,11 +91,11 @@ export default function Appointment({ navBarQueryData, footerQueryData, contactF
 
                                             <div className="mb-4 px-6 md:flex md:justify-between">
                                                 <div className="mb-4  md:mr-2 md:mb-0">
-                                                    <label className={`block mb-2  font-bold ${textColour}`}>
+                                                    <label className={`block mb-2  font-bold `}>
                                                         <i className="fas fa-phone px-2"></i>{contactFormQueryData[language].field3}
                                                     </label>
                                                     <input
-                                                        className={`w-full px-3 py-2 mb-3  leading-tight ${textColour} border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline`}
+                                                        className={`w-full px-3 py-2 mb-3  leading-tight  border border-red-500 rounded shadow appearance-none focus:outline-none focus:shadow-outline`}
                                                         id="phoneNumber"
                                                         type="text"
                                                         placeholder={contactFormQueryData[language].field3}
@@ -111,11 +103,11 @@ export default function Appointment({ navBarQueryData, footerQueryData, contactF
                                                     />
                                                 </div>
                                                 <div className="mb-4">
-                                                    <label className={`block mb-2  font-bold ${textColour}`}>
+                                                    <label className={`block mb-2  font-bold `}>
                                                         <i className="fas fa-envelope px-2"></i>{contactFormQueryData[language].field4}
                                                     </label>
                                                     <input
-                                                        className={`w-full px-3 py-2 mb-3  leading-tight ${textColour} border rounded shadow appearance-none focus:outline-none focus:shadow-outline`}
+                                                        className={`w-full px-3 py-2 mb-3  leading-tight  border rounded shadow appearance-none focus:outline-none focus:shadow-outline`}
                                                         id="email"
                                                         type="email"
                                                         placeholder={contactFormQueryData[language].field4}
@@ -126,11 +118,11 @@ export default function Appointment({ navBarQueryData, footerQueryData, contactF
 
                                             </div>
                                             <div className="mb-4 px-6">
-                                                <label className={`block mb-2  font-bold ${textColour}`}>
+                                                <label className={`block mb-2  font-bold `}>
                                                     <i className="fas fa-question px-2"></i> {contactFormQueryData[language].field5}
                                                 </label>
                                                 <textarea
-                                                    className={`w-full px-3 py-2 mb-3  leading-tight ${textColour} border rounded shadow appearance-none focus:outline-none focus:shadow-outline`}
+                                                    className={`w-full px-3 py-2 mb-3  leading-tight  border rounded shadow appearance-none focus:outline-none focus:shadow-outline`}
                                                     id="reason"
                                                     placeholder={contactFormQueryData[language].field5}
                                                     rows="4"
@@ -140,7 +132,7 @@ export default function Appointment({ navBarQueryData, footerQueryData, contactF
                                             </div>
                                             <div className="mb-6 px-12 text-center">
                                                 <button
-                                                    className={`w-full px-4 py-2 font-bold text-white rounded-full ${backgroundColour} hover:${backgroundColour} focus:outline-none focus:shadow-outline`}
+                                                    className={`w-full px-4 py-2 font-bold  rounded-full green text-white hover:green focus:outline-none focus:shadow-outline`}
                                                     type="submit"
                                                 >
                                                     <i className="fas fa-calendar-check px-2"></i> {contactFormQueryData[language].buttonText}
@@ -149,7 +141,7 @@ export default function Appointment({ navBarQueryData, footerQueryData, contactF
                                             <hr className="mb-6 border-t" />
                                             <div className="text-center">
                                                 <a
-                                                    className={`inline-block  ${textColour} align-baseline hover:${textColour}`}
+                                                    className={`inline-block   align-baseline `}
                                                     href="#"
                                                 >
                                                     {contactFormQueryData[language].bottomText1}
@@ -157,7 +149,7 @@ export default function Appointment({ navBarQueryData, footerQueryData, contactF
                                             </div>
                                             <div className="text-center">
                                                 <a
-                                                    className={`inline-block  ${textColour} align-baseline hover:${textColour}`}
+                                                    className={`inline-block align-baseline `}
                                                     href="./index.html"
                                                 >
                                                     {contactFormQueryData[language].bottomText2}
@@ -168,9 +160,6 @@ export default function Appointment({ navBarQueryData, footerQueryData, contactF
                                 </div>
                             </div>
                         </div>
-
-
-
                     </div>
                 </main>
                 <Footer language={language} footerQueryData={footerQueryData} backgroundColour={backgroundColour} setBackgroundColour={setBackgroundColour} textColour={textColour} setTextColour={setTextColour} />

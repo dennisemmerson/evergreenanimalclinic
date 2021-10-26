@@ -7,7 +7,7 @@ import Footer from "../components/Footers/MyFooter.js";
 import StaffProfile from "../components/Cards/StaffProfile.js"
 
 
-import { sanityClient, urlFor } from "../lib/sanity";
+import { sanityClient } from "../lib/sanity";
 
 // data from sanity
 const navBarQuery = `*[_type=="navBar"]`;
@@ -18,14 +18,13 @@ const nurseProfileQuery = `*[_type=="nurseProfile"]`;
 const groomerProfileQuery = `*[_type=="groomerProfile"]`;
 
 
-export default function OurStaff({ navBarQueryData, footerQueryData, ourStaffPageQueryData,vetProfileQueryData, nurseProfileQueryData, groomerProfileQueryData }) {
+export default function OurStaff({ navBarQueryData, footerQueryData, ourStaffPageQueryData, vetProfileQueryData, nurseProfileQueryData, groomerProfileQueryData }) {
 
     const { language, setLanguage, backgroundColour, setBackgroundColour, textColour, setTextColour } = React.useContext(LanguageContext);
 
     const [openTab, setOpenTab] = React.useState(1);
 
     let color = "green";
-     console.log("vet" + nurseProfileQueryData)
     return (
         <>
 
@@ -104,9 +103,9 @@ export default function OurStaff({ navBarQueryData, footerQueryData, ourStaffPag
                             </ul>
                             <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded">
                                 <div className="px-4 py-5 flex-auto">
-                                    <div className="tab-content tab-space"> 
+                                    <div className="tab-content tab-space">
                                         <div className={openTab === 1 ? "block" : "hidden"} id="link1">
-                                            <StaffProfile vetProfileQueryData={vetProfileQueryData} language={language}/>
+                                            <StaffProfile vetProfileQueryData={vetProfileQueryData} language={language} />
                                         </div>
                                         <div className={openTab === 2 ? "block" : "hidden"} id="link2">
                                             <StaffProfile nurseProfileQueryData={nurseProfileQueryData} language={language} />
